@@ -21,6 +21,9 @@ public class Main {
         Drawer<Integer> arr4 = new Drawer<>(84);
 
 
+        Drawer<String> arr5 = new Drawer<>("lala");
+
+
         Drawer<Integer> [] nani = new Drawer[]{ arr, arr1, arr2,arr3, arr4 };
 //
 //        nani[0] = arr;
@@ -45,6 +48,32 @@ public class Main {
 
         arr.find(1);
 
+        Validator isValid = s -> {
+            if(s == null){
+                return false;
+            }else{
+                return true;
+            }
+
+        };
+
+        boolean a = isValid.isValid(arr5);
+        System.out.println("Valor de la Functional Interface: " + a);
+        arr5 = null;
+
+        boolean b = isValid.isValid(arr5);
+
+        System.out.println("Valor de la Functional Interface "+ b);
+
+
 
     }
+
+
+//    @FunctionalInterface
+//    interface Validator<T> {
+//        public boolean isValid(T obj);
+//    }
+
 }
+
