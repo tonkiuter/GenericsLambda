@@ -2,6 +2,7 @@ package com.okaru;
 
 import java.util.*;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,6 +13,40 @@ public class Main {
         Stack<String> stack = new Stack<>();
         Queue<Integer> queue = new LinkedList<>();
         List<String> lista = new LinkedList<>();
+
+        ArrayList<? super Person> myLista = new ArrayList<Person>();
+        ArrayList<Cards> cartas = new ArrayList<>();
+
+        Cards card = new Cards("poker");
+        Cards card2 = new Cards("yugioh");
+        Painter painter = new Painter("Picasso");
+
+        myLista.add(card);
+        myLista.add(card2);
+//        myLista.add(painter);
+
+        cartas.add(card);
+        cartas.add(card2);
+
+        System.out.println("========= Impresion de Prueba =============");
+        for (int i = 0; i < myLista.size() ; i++) {
+            Object some = myLista.get(i);
+            System.out.println(some);
+//            System.out.println(myLista.);
+        }
+
+        for (int i = 0; i < cartas.size(); i++) {
+            Cards temp = cartas.get(i);
+            System.out.println(cartas.get(i).getName());
+        }
+
+//        System.out.println(myLista.get(0));
+
+
+//        Painter painter = new Painter("Picasso");
+//        myLista.add(painter);
+
+
 
 
         Drawer<Integer> arr = new Drawer<>(1);

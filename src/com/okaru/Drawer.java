@@ -1,6 +1,6 @@
 package com.okaru;
 
-public class Drawer<T> {
+public class Drawer<T>{
     private T name;
     private int size;
     private Drawer[] array;

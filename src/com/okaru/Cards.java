@@ -1,10 +1,7 @@
 package com.okaru;
 
-public class Cards {
-
-  private String name;
-
+public class Cards extends Person {
     public Cards(String name) {
-        this.name = name;
+        super(name);
     }
 }
